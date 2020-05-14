@@ -5,8 +5,8 @@
 <title>Untitled Document</title>
 	<link href="css/main.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="css/animate.css">
+ 	<link rel="stylesheet" href="css/site.css">
 	<style>
 		html
 		{
@@ -40,6 +40,7 @@
 		</nav>
 		<div id="trangchu" class="home">
 			<div class="contenthome">
+				<section class="wow fadeInUp" data-wow-delay="0.2s">
 				<font style="font-size: 35pt">
 					CHÀO! TÊN TÔI LÀ <br>
 					<font style="font-size: 55pt; font-weight: bold"> 
@@ -51,15 +52,17 @@
 						</font>
 					</div>
 				</font>
+				</section>
 			</div>
 		</div>
 		
 		<div id="thongtin" class="aboutme">
 			<img style="margin: 200px 120px 200px 120px" src="images/Aboutme.png">
-			<div class="contentaboutme">
+			<div class="contentaboutme wow bounceInRight" data-wow-delay="0.2s">
 				<img src="images/Aboutme1.png">
 				<br> <br> <br>
-				<font style="font-size: 23pt">
+	
+				<font style="font-size: 16pt">
 				Tôi là người thiết kế web. Tôi đã có nhiều năm làm việc <br>
 				và học hỏi tại trường Arena Multimedia về thiết kế Websign <br>
 				bao gồm css, html,... Qua những năm tháng ở trường, <br>
@@ -84,6 +87,7 @@
 			<img style="padding: 150px 0px 50px 0px" src="images/Work 1.png">
 			</center>
 			<div class="contentwork">
+				<section class="wow bounceInLeft" data-wow-delay="0.2s">
 				<font style="font-size: 17pt; font-weight: bold">
 			<ol>
 				<li><a href="">TẤT CẢ</a></li>
@@ -93,6 +97,8 @@
 				<li><a href="">THƯƠNG HIỆU</a></li>
 			</ol>
 				</font>
+				</section>
+				
 				<div class="center">
 					
 				<div class="khunghinh">
@@ -144,9 +150,12 @@
 		</div>
 		
 		<div id="lienhe" class="contact">
+			<section class="wow fadeInLeft" data-wow-delay="0.2s">
 			<img src="images/contact.png">
-			
+			</section>
+			<section class="wow bounceInRight" data-wow-delay="0.2s">
 			<div class="contentcontact">
+				
 				
 			<div class="icon">
 				<a href=""><i class="fa fa-facebook" style="font-size:48px;color:black"></i></a>
@@ -169,13 +178,33 @@
 			</div>
 				
 			</div>
+			
 				<center>
 				<font style="font-size: 23pt">
 					@ 2020 Gtc. All Rights Reserved
 				</font>
 				</center>
+			</section>
 		</div>
 		
 	</div>
+	 <script src="js/wow.js"></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
 </body>
 </html>
